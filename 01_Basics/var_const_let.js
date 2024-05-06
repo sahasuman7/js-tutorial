@@ -17,3 +17,7 @@ accountCity = "Bardwan"
 
 console.log(accounId);
 console.table([accountEmail,accountPass,accountCity]);
+
+/* Prefer not to use var
+Because of issue of block scope and function scope */ 
+
