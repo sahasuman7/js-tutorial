@@ -54,7 +54,20 @@ let boolLoggedin = Boolean(isLoggedin)
 
 // console.log(boolLoggedin);
 console.log();
-let someNum = true
-let someString = String(someNum)
-someString = someString+"aum"
-console.log(someString,typeof(someString))
+// let someNum = true
+// let someString = String(someNum)
+// someString = someString+"aum"
+// console.log(someString,typeof(someString))
+
+
+// let str3 = "33" + (4 +4)
+// console.log(str3, typeof(str3));
+
+// * and / has more precedence than + and -
+// console.log(3+4*5%3); //5 
+
+
+let va = +true
+
+console.log();
+
