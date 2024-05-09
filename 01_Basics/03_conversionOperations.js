@@ -67,7 +67,28 @@ console.log();
 // console.log(3+4*5%3); //5 
 
 
-let va = +true
+//Some Conversion Operations
 
-console.log();
+// let va = +true
+// let vaa = +""
+
+// console.log(va,typeof(va));
+// console.log(vaa,typeof(vaa));
+
+// Pre-Increment and Post-Increment Operations
+
+// {
+//     let x = 5
+//     const y = x++
+//     console.log(`x: ${x}, y: ${y}`);
+    
+// }
+
+// {
+//     let x= 5
+//     const y = ++x
+//     console.log(`x: ${x}, y: ${y}`);
+// }
+
+
 
