@@ -32,3 +32,5 @@ function wish(s,n) {
 }
 
 console.log(typeof(arr));
+
+
