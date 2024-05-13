@@ -1,5 +1,5 @@
-let name = new String("Debolina Saha ");
-let sur_name = new String("Suman Saha Saha Saha");
+let name = new String("Debolina Saha");
+let sur_name = new String("Suman_Saha_Saha_Saha");
 
 
 // Indexing
@@ -54,4 +54,15 @@ let sur_name = new String("Suman Saha Saha Saha");
 
 // console.log(sur_name.replace("Suman","Singha"));
 
-console.log(sur_name.replaceAll("Saha","Lion"));
+// console.log(sur_name.replaceAll("Saha","Lion"));
+
+// console.log(name.slice(-9));
+
+
+// console.log(sur_name.split('_'));
+
+let n = new String("Suman")
+console.log(typeof(n));
+
+let x = n.valueOf();
+console.log(typeof(x));
