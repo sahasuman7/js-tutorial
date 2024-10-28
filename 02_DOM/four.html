@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Element Edit</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            background-color: #414141;
+            color: #fff;
+            
+        }
+        h1{
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM EDIT ELEMENT</h1>
+    <input type="text" id="my-inp">
+    <button onclick="addLi()"> Add Li</button>
+    <ul class="my-list">
+        <li>JavaScript</li>
+        <li>HTML</li>
+    </ul>
+</body>
+<script>
+    
+   
+    function addLi(){
+        let addText = document.querySelector('#my-inp').value;
+        
+        const listElement = document.querySelector('.my-list');
+
+        let li = document.createElement('li');
+        let text = document.createTextNode(`${addText}`)
+        li.appendChild(text)
+    
+        listElement.appendChild(li)
+    }
+
+    let second_lang = document.querySelector('li:nth-child(2)');
+    console.log(second_lang);
+    // second_lang.innerHTML = 'JAVA';
+
+    const newli = document.createElement('li');
+    newli.appendChild(document.createTextNode("GoLang"))
+    second_lang.replaceWith(newli)
+    
+    
+
+    
+    
+    
+    
+</script>
+</html>

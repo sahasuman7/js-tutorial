@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Create Element</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            background-color: #414141;
+            
+        }
+        h1{
+            color:white;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>DOM Create Element</h1>
+
+
+    
+</body>
+<script>
+
+    // Creating div Element through JS
+
+    const div = document.createElement('div');
+    div.className = "container";
+    div.id = "my-div"
+    div.setAttribute("title","This is my Div");
+    div.style.backgroundColor = 'green';
+    div.style.padding = '20px';
+    div.style.color = 'white';
+    let text  = document.createTextNode("Suman Saha is a Billionaire");
+    div.appendChild(text);
+
+    console.log(div);
+
+    document.body.appendChild(div)
+    
+    
+</script>
+</html>
