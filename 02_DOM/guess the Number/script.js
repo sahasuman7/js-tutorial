@@ -54,7 +54,9 @@
 
 // Another Solution
 
-const randomNumber = Math.floor(Math.random()*10)+1;
+let randomNumber = Math.floor(Math.random()*10)+1;
+console.log(randomNumber);
+
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
@@ -68,7 +70,7 @@ const p = document.createElement('p');
 console.log(p);
 
 let prevGuess = [];
-let numGuess = 1;
+let numGuess = 0;
 let playGame = true;
 
 if(playGame){
@@ -87,7 +89,7 @@ function validateGuess(guess){
         alert("Please Enter a Valid Number")
     } else{
         prevGuess.push(guess);
-        if(numGuess === 11){
+        if(numGuess === 9){
             displayGuess(guess)
             displayMessage(`Game Over. Random Number Was ${randomNumber}`);
             endGame();
@@ -116,20 +118,42 @@ function displayGuess(guess){
     userInput.value = '';
     guessSlot.innerHTML += `${guess}  `;
     numGuess++;
-    remaining.innerHTML = `${11-numGuess}`
+    remaining.innerHTML = `${10-numGuess}`
     
 }
 
 function displayMessage(message){
     showResult.innerHTML = `<h2>${message}</h2>`;
-
 }
 
 function newGame(){
+    let startGame = document.querySelector('#newGame');
+    startGame.addEventListener('click', function(e){
+        randomNumber = Math.floor(Math.random()*10)+1;
+        console.log(randomNumber);
+        
+        prevGuess = []
+        numGuess =0;
+        guessSlot.innerHTML = '';
+        remaining.innerHTML = `${10-numGuess}`
+        userInput.removeAttribute('disabled');
+        startOver.removeChild(p);
+        playGame =true;
 
+        
+
+    });
 }
 
 function endGame(){
+    userInput.value = '';
+    userInput.setAttribute('disabled','');
+    p.classList.add('button');
+    p.innerHTML= `<h2 id='newGame'>Start New Game</h2>`
+    p.style.backgroundColor = 'green';
+    startOver.appendChild(p);
+    playGame = false;
+    newGame();
 
 }
 
