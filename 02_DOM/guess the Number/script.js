@@ -23,7 +23,7 @@ formElement.addEventListener('submit', function(e){
     let value = inputElement.value;
 
     if(value == randomNum){
-        output.innerHTML = 'Success';
+        output.innerHTML = 'Success Win The Game';
         prevGuess = [];
         guessCount  = prevGuess.length;
         guessArray.innerHTML = `${prevGuess}`;
@@ -39,9 +39,20 @@ formElement.addEventListener('submit', function(e){
         }else{
             prevGuess.push(value);
             guessCount = prevGuess.length;
-
             guessArray.innerHTML = `${prevGuess}`;
             remainChaince.innerHTML = `${(10-guessCount)}`;
+            if(guessCount == 10){
+                output.innerHTML = 'Try Again:)'
+                prevGuess = [];
+                guessCount  = prevGuess.length;
+                guessArray.innerHTML = `${prevGuess}`;
+                remainChaince.innerHTML = `${(10-guessCount)}`;
+
+
+
+            }
+
+            
 
 
 
