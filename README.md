@@ -2,7 +2,7 @@
 Learning Javascript 
 
 
-```
+```javascript
 const formElement = document.querySelector('form');
 
 formElement.addEventListener('submit', function (e) {
