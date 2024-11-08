@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Listner</title>
+    <style>
+        .my-li{
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <ul class="main-ul">
@@ -11,15 +16,37 @@
         <li class="my-li"><button id="green" style="background-color: green; padding: 8px 18px; color:aliceblue; border-radius: 5px; border: none;">Green</button></li>
         <li class="my-li"><button id="red" style="background-color: red; padding: 8px 18px; color:aliceblue; border-radius: 5px; border: none;">Red</button></li>
         <li class="my-li"><button id="yellow" style="background-color: rgb(239, 198, 63); padding: 8px 18px; color:aliceblue; border-radius: 5px; border: none;">Yellow</button></li>
+        <li><a id="google" href="https://google.com" style="text-decoration: none; color: rgb(235, 53, 53); font-size: 30px;"> Google</a></li>
     </ul>
 </body>
 <script>
+    // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+    let myUl = document.querySelector('.main-ul');
     let blue = document.querySelector('#blue');
-    blue.addEventListener('click',function(e){
-        console.log(e);
-        
+    let google = document.getElementById('google');
 
-    });
+    myUl.addEventListener('click',function(e){
+        console.log("Ul Clicked")
+        
+        
+        
+    },false);
+
+    blue.addEventListener('click',function(e){
+        console.log(e.target.src);
+        
+        e.stopPropagation()
+        
+        
+    },false);
+
+    google.addEventListener('click', function(e){
+        e.preventDefault();
+        console.log(e.target.href);
+        
+    },false)
 
 </script>
 </html>

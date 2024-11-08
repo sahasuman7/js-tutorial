@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Images</title>
+    <style>
+        .images{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="my-image">
+        <li class="my-li"><img class="images" id="html" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" alt=""></li>
+        <li class="my-li"><img class="images" id="css" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt=""></li>
+        <li class="my-li"><img class="images" id="js" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png" alt=""></li>
+        <li class="my-li"><img class="images" id="react" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png" alt=""></li>
+        <li class="my-li"><img class="images" id="redux" src="https://miro.medium.com/v2/resize:fit:500/1*tOI6UC5EaS2fPItCesI-AQ.png" alt=""></li>
+    </ul>
+    
+</body>
+<script>
+    let ulElement = document.querySelector('#my-image');
+
+    ulElement.addEventListener('click', function(e){
+        console.log(e.target.src);
+        
+        let removeItem = e.target
+        // removeItem.remove()
+        // removeItem.parentNode.removeChild(removeItem);
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            console.log(e.target.tagName);
+            removeItem.parentNode.remove()
+        } else if(e.target.tagName === 'LI'){
+            removeItem.remove()
+        }
+        
+
+        
+    },false)
+</script>
+</html>
