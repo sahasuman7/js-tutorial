@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function squre(num){
+        this.num = num;
+
+        
+        return num*num;
+    }
+    
+    squre.prototype.printNum = function(){
+        console.log(`Num is ${this.num}`);
+    }
+    
+
+    console.log(squre(2)); //4
+    console.log(squre); // print the function
+    console.log(squre.prototype); // print the boject prototype
+    // squre.printNum(); // This will give is error (new) keyword will make a new object will include this new methods to the new created object
+    
+    let obj = new squre(3);
+    console.log(obj);
+    obj.printNum();
+    
+
+    // 
+    
+    
+    
+    
+    
+    
+</script>
+</html>
