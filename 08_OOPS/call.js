@@ -4,7 +4,6 @@ function setUsername(username){
     this.username = username;
     console.log('Method Called');
     // console.log(this);
-
     
 }
 
