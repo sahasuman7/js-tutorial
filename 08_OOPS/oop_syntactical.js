@@ -1,4 +1,8 @@
 class mobile{
+
+    // Private Property
+    #imei = '#12388346372881';
+    fax = true;
     constructor(number,os,brand){
         this.number = number;
         this.os = os;
@@ -18,6 +22,7 @@ class mobile{
 
     myNumber(){
         console.log(`Phone Number ${this.number}`);
+
     }
 }
 
@@ -46,3 +51,11 @@ motorola.photo()
 let iPhone16 = new iPhone(8910100962,'iphoneOS','Apple');
 
 console.log(iPhone16);
+console.log(motorola.fax);
+console.log(motorola.imei); 
+
+
+
+
+
+
