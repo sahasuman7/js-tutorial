@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button id="btn">Click Here</button>
+    
+</body>
+<script>
+    console.log('Connected!!!');
+
+    class Bank{
+        constructor(name,accno){
+            this.name = name;
+            this.server = `${name}.server`;
+            this.accNum = accno;
+
+            document.querySelector('#btn').addEventListener('click', this.doCallBank.bind(this))
+            // console.log(this);
+            
+        }
+
+        doCallBank(){
+            console.log('You are connected to Your Bank');
+            console.log(`Your Bank Details ${this.name}, ${this.server}, ${this.accNum}`);
+            console.log(this);
+            
+        }
+    }
+    const myBank = new Bank('HDFC','06009277738');
+    
+</script>
+</html>
